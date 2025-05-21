@@ -10,6 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
     <title>Chelsea's Weather Application</title>
   </head>
   <body>
@@ -29,7 +30,7 @@
       <main>
         <div class="display-weather-data">
           <div>
-            <h1 id="city-element">Sydney</h1>
+            <h1 id="city-element"></h1>
             <div class="time">
               Friday 21:27, clear sky <br />
               Humidity: <span class="data-highlight">45%</span>, Wind:
@@ -38,7 +39,7 @@
           </div>
           <div class="current-temperature-container">
             <div class="temperature-icon">☀️</div>
-            <div class="temperature-value">21</div>
+            <div class="temperature-value" id="temperature-element"></div>
             <div class="temperature-unit">°C</div>
           </div>
         </div>
