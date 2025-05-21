@@ -15,12 +15,13 @@
   <body>
     <div class="weather-app-container">
       <header>
-        <form>
+        <form id="search-form">
           <input
             type="text"
             placeholder="Enter a city"
             required
             class="city-input"
+            id="search-form-input"
           />
           <input type="submit" value="Search" class="city-input-button" />
         </form>
@@ -28,7 +29,7 @@
       <main>
         <div class="display-weather-data">
           <div>
-            <h1>Sydney</h1>
+            <h1 id="city-element">Sydney</h1>
             <div class="time">
               Friday 21:27, clear sky <br />
               Humidity: <span class="data-highlight">45%</span>, Wind:
@@ -53,5 +54,6 @@
         >.
       </footer>
     </div>
+    <script src="src/app.js"></script>
   </body>
 </html>
