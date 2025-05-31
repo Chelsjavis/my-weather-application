@@ -87,6 +87,45 @@ main h1 {
   font-size: 28px;
 }
 
+.weather-forecast {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+
+.forecast-days {
+  padding: 10px;
+  box-shadow: 0 0 20px rgba(65, 50, 100, 0.08);
+  border-radius: 10px;
+  transition: 200ms ease-in-out;
+}
+
+.forecast-days:hover {
+  transform: scale(1.1);
+}
+
+.forecast-day {
+  text-align: center;
+  color: rgba(39, 33, 66, 0.4);
+  font-size: 16px;
+  line-height: 20px;
+  margin-bottom: 10px;
+}
+
+.forecast-icon {
+  text-align: center;
+}
+
+.forecast-temperatures {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  color: #f65282;
+}
+
+.forecast-temp {
+  padding: 0 10px;
+}
 footer {
   padding-top: 10px;
   border-top: 2px solid #f9f7fe;
