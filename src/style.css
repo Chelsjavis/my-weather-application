@@ -74,7 +74,7 @@ main h1 {
 
 .temperature-icon {
   font-size: 56px;
-  padding: 10px;
+  padding-right: 12px;
 }
 
 .temperature-value {

@@ -5,12 +5,16 @@ function updateWeather(response) {
   let windSpeedElement = document.querySelector("#wind-speed");
   let timeElement = document.querySelector("#time");
   let date = new Date(response.data.time * 1000);
+  let iconElement = document.querySelector("#temperature-icon");
+  let iconUrl = response.data.condition.icon_url;
+  console.log(iconUrl);
 
   cityElement.innerHTML = response.data.city;
   descriptionElement.innerHTML = response.data.condition.description;
   humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
   windSpeedElement.innerHTML = `${response.data.wind.speed}km/h`;
   timeElement.innerHTML = formatDate(date);
+  iconElement.innerHTML = `<img src="${iconUrl}">`;
 
   let temperatureElement = document.querySelector("#temperature-element");
   let temperature = Math.round(response.data.temperature.current);
@@ -42,6 +46,8 @@ function searchCity(city) {
   let apiKey = "1894f4b60349tcab94fb26933d94a5o1";
   let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
   axios.get(apiUrl).then(updateWeather);
+
+  console.log(apiUrl);
 }
 
 function weatherSearchSubmit(event) {
